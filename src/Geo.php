@@ -59,6 +59,7 @@ class Geo extends EloquentTreeItem
         return $query->where(function ($query) {
             $query->where('left', '>', $this->left)
                 ->where('right', '<', $this->right)
+                ->where('country', '<', $this->country)
                 ->where('depth', $this->depth + 1);
         });
     }
