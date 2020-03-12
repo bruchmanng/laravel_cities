@@ -131,8 +131,8 @@ class seedGeoFile extends Command
                 case 'ADM1':
                 case 'ADM2':
                 case 'ADM3':   // 8 sec
-                case 'PPLA':   // областные центры
-                case 'PPLA2':  // Корсунь
+                //case 'PPLA':   // областные центры
+                //case 'PPLA2':  // Корсунь
                 //case 'PPL':    // a city, town, village, or other agglomeration of buildings where people live and work
                     // 185 sec
                     $this->geoItems->add(new geoItem($line, $this->geoItems));
@@ -146,6 +146,8 @@ class seedGeoFile extends Command
                 $this->processItems($country);
             }
         }
+
+        $this->processItems($country);
 
         $progressBar->finish();
 
