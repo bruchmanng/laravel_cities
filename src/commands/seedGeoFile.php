@@ -227,9 +227,6 @@ class seedGeoFile extends Command
         //if all countries
         $fileName = storage_path('geo/hierarchy.txt');
         //ini_set('xdebug.max_nesting_level', 5000);
-        if ($country != '') {
-            $fileName = storage_path("geo/hierarchy-$country.txt");
-        }
         
         $this->info("Opening File '$fileName'</info>");
         $handle = fopen($fileName, 'r');
